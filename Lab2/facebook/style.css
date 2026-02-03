@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #f0f2f5;
+            padding: 0 15px;
+        }
+
+        .fb-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .fb-text {
+            margin-bottom: 90px;
+            max-width: 500px;
+        }
+
+        .fb-text h1 {
+            color: #1877f2;
+            font-size: 4rem;
+            margin-bottom: 10px;
+            letter-spacing: -2px;
+        }
+
+        .fb-text p {
+            font-size: 1.75rem;
+            line-height: 1.2;
+            color: #1c1e21;
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        form input {
+            height: 52px;
+            width: 100%;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            font-size: 1rem;
+            padding: 14px;
+            outline: none;
+        }
+
+        form input:focus {
+            border-color: #1877f2;
+            box-shadow: 0 0 0 2px #e7f3ff;
+        }
+
+        .login-btn {
+            background: #1877f2;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: 700;
+            padding: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #166fe5;
+        }
+
+        .forgot-link {
+            text-decoration: none;
+            color: #1877f2;
+            font-size: 14px;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .bottom-text {
+            margin-top: 20px;
+            font-size: 15.2px;
+            text-align: center; 
+            color: #1c1e21;
+        }
+
+        .bottom-text a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #1c1e21;
+        }
+
+        .bottom-text a:hover {
+            text-decoration: underline;
+        }
+
+        .forgot-link:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #dadde1;
+            margin-bottom: 20px;
+        }
+
+        .create-btn-container {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .create-btn {
+            text-decoration: none;
+            background: #42b72a;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 700;
+            padding: 12px 16px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .create-btn:hover {
+            background: #36a420;
+        }
+
+
+        footer {
+            background: #fff;
+            padding: 20px 0;
+            color: #8a8d91;
+            font-size: 12px;
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        footer ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        footer ul:first-child {
+            border-bottom: 1px solid #dddfe2;
+        }
+
+        footer li {
+            margin-right: 20px;
+            margin-bottom: 5px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #8a8d91;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+
+        @media (max-width: 900px) {
+            .fb-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .fb-text {
+                margin-bottom: 40px;
+                padding: 0 20px;
+            }
+            .fb-text h1 {
+                font-size: 3rem;
+            }
+            .fb-text p {
+                font-size: 1.5rem;
+            }
+        }
