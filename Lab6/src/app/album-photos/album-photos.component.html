@@ -2,7 +2,14 @@
   <h1>Album Photos</h1>
   <div class="row">
     <div class="col-md-4 mb-3" *ngFor="let photo of photos">
-      <img [src]="photo.thumbnailUrl" [alt]="photo.title" class="img-thumbnail">
+      <img 
+        [src]="photo.thumbnailUrl" 
+        [alt]="photo.title" 
+        class="img-thumbnail"
+        loading="eager"
+        width="150"
+        height="150"
+      >
     </div>
   </div>
   <button class="btn btn-secondary" (click)="goBack()">Return</button>
