@@ -1,23 +1,8 @@
-from models import Car, Motorcycle
+teacher1 = Teacher("Айсұлу", 35, "Математика", 10)
+student1 = Student("Әлихан", 14, 8)
 
-def main():
-    
-    my_car = Car("Toyota", "Camry", 2023, "Petrol")
-    my_bike = Motorcycle("Yamaha", "MT-07", 2022, False)
+print(teacher1.introduce())  
+print(teacher1.teach())      
 
-    
-    vehicles = [my_car, my_bike]
-
-    print("--- Vehicle Demonstration ---")
-    for v in vehicles:
-        print(f"Vehicle Info: {v}")
-        print(v.start_engine())
-        print(v.drive())
-        print("-" * 30)
-
-   
-    print(my_car.refuel())
-    print(my_bike.wheelie())
-
-if __name__ == "__main__":
-    main()
+print(student1.introduce())  
+print(student1.add_grade(5)) 

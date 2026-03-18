@@ -1,39 +1,44 @@
-class Vehicle:
-    def __init__(self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-    def start_engine(self):
-        return f"The engine of {self.make} {self.model} is starting..."
+    def introduce(self):
+        return f"Сәлем, менің атым {self.name}. Жасым {self.age}-де."
 
-    def drive(self):
-        return f"{self.make} is moving."
+    def get_role(self):
+        return "Мектеп мүшесі"
 
     def __str__(self):
-        return f"{self.year} {self.make} {self.model}"
+        return f"{self.name} ({self.age} жас)"
 
 
-class Car(Vehicle):
-    def __init__(self, make, model, year, fuel_type):
-        super().__init__(make, model, year)
-        self.fuel_type = fuel_type
+class Teacher(Person):
+    def __init__(self, name, age, subject, experience):
+        super().__init__(name, age)
+        self.subject = subject
+        self.experience = experience
+
+    def get_role(self):
+        return f"{self.subject} пәні мұғалімі"
+
+    def teach(self):
+        return f"{self.name} қазір {self.subject} сабағын түсіндіріп жатыр."
 
 
-    def drive(self):
-        return f"The {self.model} car is driving smoothly on the road."
+class Student(Person):
+    def __init__(self, name, age, grade_level):
+        super().__init__(name, age)
+        self.grade_level = grade_level
+        self.grades = []
 
-    def refuel(self):
-        return f"Refilling {self.fuel_type} tank."
+    def get_role(self):
+        return f"{self.grade_level}-сынып оқушысы"
 
+    def add_grade(self, mark):
+        self.grades.append(mark)
+        return f"{mark} бағасы қойылды."
 
-class Motorcycle(Vehicle):
-    def __init__(self, make, model, year, has_sidecar=False):
-        super().__init__(make, model, year)
-        self.has_sidecar = has_sidecar
-
-    def drive(self):
-        return f"The {self.model} motorcycle is weaving through traffic."
-
-    def wheelie(self):
-        return "Doing a wheelie! Be careful!"
+    def introduce(self):
+        basic_intro = super().introduce()
+        return f"{basic_intro} Мен {self.grade_level}-сыныпта оқимын."
